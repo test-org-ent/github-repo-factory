@@ -6,12 +6,13 @@ terraform {
     }
   }
 }
+provider "github" {
+  token = var.token    # or `GITHUB_TOKEN`
+}
+
 
 variable "token" {
   type = string
 }
 
-provider "github" {
-  token = var.token    # or `GITHUB_TOKEN`
-}
 
