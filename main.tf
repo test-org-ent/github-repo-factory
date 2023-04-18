@@ -1,18 +1,12 @@
 terraform {
   required_providers {
     github = {
-      source  = "integrations/github"
-      version = "~> 5.0"
+      source = "integrations/github"
+      version = "5.23.0"
     }
   }
 }
+
 provider "github" {
-  token = var.token    # or `GITHUB_TOKEN`
+  # Configuration options
 }
-
-
-variable "token" {
-  type = string
-}
-
-
